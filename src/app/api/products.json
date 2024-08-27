@@ -1,0 +1,61 @@
+[
+    {
+    "id": 1,
+    "type": "Termofusion",
+    "image": "Codo-Fusion-2.png",
+    "title": "Codo Fusion",
+    "description": "High-quality widgets for all your needs.",
+    "sizes": [
+        { "name": "20mm", "sizes": [100, 26, 900] },
+        { "name": "25mm", "sizes": [80, 20, 600] }
+      ]
+  },
+  {
+    "id": 2,
+    "type": "Termofusion",
+    "image": "Te-Fusion-2.png",
+    "title": "Te Fusion",
+    "description": "Innovative gadgets to make your life easier.",
+    "sizes": [
+        { "name": "20mm", "sizes": [80, 20, 560] },
+        { "name": "25mm", "sizes": [50, 12, 350] },
+        { "name": "32mm", "sizes": [24, 8, 200] }
+      ]
+  },
+  {
+    "id": 3,
+    "type": "Termofusion",
+    "image": "Cupla-Fusion-1.png",
+    "title": "Cupla Fusion",
+    "description": "Long-lasting batteries for your devices.",
+    "sizes": [
+        { "name": "20mm", "sizes": [100, 26, 900] },
+        { "name": "25mm", "sizes": [80, 20, 800] },
+        { "name": "32mm", "sizes": [50, 14, 400] }
+      ]
+  },
+  {
+    "id": 4,
+    "type": "Termofusion",
+    "image": "Tapa-Fusion-1.png",
+    "title": "Tapa Fusion",
+    "description": "Long-lasting batteries for your devices.",
+    "sizes": [
+        { "name": "20mm", "sizes": [150, 50, 1600] },
+        { "name": "25mm", "sizes": [120, 30, 1200] },
+        { "name": "32mm", "sizes": [70, 20, 600] }
+      ]
+  },
+  {
+    "id": 4,
+    "type": "Termofusion",
+    "image": "Union-Doble-Fusion.png",
+    "title": "Union Doble Fusion",
+    "description": "Long-lasting batteries for your devices.",
+    "sizes": [
+        { "name": "20mm", "sizes": [50, 12, 504] },
+        { "name": "25mm", "sizes": [36, 8, 350] }
+      ]
+  }
+
+]
