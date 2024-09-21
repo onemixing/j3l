@@ -3,59 +3,385 @@
     "id": 1,
     "type": "Termofusion",
     "image": "Codo-Fusion-2.png",
-    "title": "Codo Fusion",
-    "description": "High-quality widgets for all your needs.",
+    "title": "CODO FUSIÓN",
     "sizes": [
-        { "name": "20mm", "sizes": [100, 26, 900] },
-        { "name": "25mm", "sizes": [80, 20, 600] }
+        { "name": "20mm", "sizes": [100, 26, 900], "codes": ["FCO20", "MFCO20", "LFCO20"] },
+        { "name": "25mm", "sizes": [80, 20, 600], "codes": ["FCO25", "MFCO25", "LFCO25"] }
       ]
   },
   {
     "id": 2,
     "type": "Termofusion",
     "image": "Te-Fusion-2.png",
-    "title": "Te Fusion",
-    "description": "Innovative gadgets to make your life easier.",
+    "title": "TE FUSIÓN",
     "sizes": [
-        { "name": "20mm", "sizes": [80, 20, 560] },
-        { "name": "25mm", "sizes": [50, 12, 350] },
-        { "name": "32mm", "sizes": [24, 8, 200] }
+        { "name": "20mm", "sizes": [80, 20, 560], "codes": ["FT20", "MFT20", "LFT20"] },
+        { "name": "25mm", "sizes": [50, 12, 350], "codes": ["FT25", "MFT25", "LFT25"] },
+        { "name": "32mm", "sizes": [24, 8, 200], "codes": ["FT32", "MFT32", "LFT32"] }
       ]
   },
   {
     "id": 3,
     "type": "Termofusion",
     "image": "Cupla-Fusion-1.png",
-    "title": "Cupla Fusion",
-    "description": "Long-lasting batteries for your devices.",
+    "title": "CUPLA FUSIÓN",
     "sizes": [
-        { "name": "20mm", "sizes": [100, 26, 900] },
-        { "name": "25mm", "sizes": [80, 20, 800] },
-        { "name": "32mm", "sizes": [50, 14, 400] }
+        { "name": "20mm", "sizes": [100, 26, 900], "codes": ["FCU20", "MFCU20", "LFCU20"] },
+        { "name": "25mm", "sizes": [80, 20, 800], "codes": ["FCU25", "MFCU25", "LFCU25"] },
+        { "name": "32mm", "sizes": [50, 14, 400], "codes": ["FCU32", "MFCU32", "LFCU32"] }
       ]
   },
   {
     "id": 4,
     "type": "Termofusion",
     "image": "Tapa-Fusion-1.png",
-    "title": "Tapa Fusion",
-    "description": "Long-lasting batteries for your devices.",
+    "title": "TAPA FUSIÓN",
     "sizes": [
-        { "name": "20mm", "sizes": [150, 50, 1600] },
-        { "name": "25mm", "sizes": [120, 30, 1200] },
-        { "name": "32mm", "sizes": [70, 20, 600] }
+        { "name": "20mm", "sizes": [150, 50, 1600], "codes": ["FTA20", "MFTA20", "LFTA20"] },
+        { "name": "25mm", "sizes": [120, 30, 1200], "codes": ["FTA25", "MFTA25", "LFTA25"] },
+        { "name": "32mm", "sizes": [70, 20, 600], "codes": ["FTA32", "MFTA32", "LFTA32"] }
       ]
   },
   {
     "id": 4,
     "type": "Termofusion",
     "image": "Union-Doble-Fusion.png",
-    "title": "Union Doble Fusion",
-    "description": "Long-lasting batteries for your devices.",
+    "title": "UNION DOBLE FUSIÓN",
     "sizes": [
-        { "name": "20mm", "sizes": [50, 12, 504] },
-        { "name": "25mm", "sizes": [36, 8, 350] }
+        { "name": "20mm", "sizes": [50, 12, 504], "codes": ["FUD20", "MFUD20", "LFUD20"] },
+        { "name": "25mm", "sizes": [36, 8, 350], "codes": ["FUD25", "MFUD25", "LFUD25"] }
       ]
-  }
-
+  },
+  {
+    "id": 5,
+    "type": "Mixta",
+    "image": "Union-doble-mixta.png",
+    "title": "UNION DOBLE MIXTA",
+    "sizes": [
+        { "name": "20mm", "sizes": [50, 12, 504], "codes": ["FUD20MIX", "MFUD20MIX", "LFUD20MIX"] },
+        { "name": "25mm", "sizes": [36, 8, 350], "codes": ["FUD25MIX", "MFUD25MIX", "LFUD25MIX"] }
+      ]
+  },
+  {
+    "id": 6,
+    "type": "Polipropileno",
+    "image": "Te.png",
+    "title": "TE 90º HHH",
+    "sizes": [
+        { "name": "1/2¨", "sizes": [80, 20, 560], "codes": ["1001", "M1001", "L1001"] },
+        { "name": "3/4¨", "sizes": [50, 12, 350], "codes": ["1002","M1002", "L1002"] },
+        { "name": "1¨", "sizes": [30, 8, 210], "codes": ["1003","M1003", "L1003"] },
+        { "name": "1 1/4", "sizes": [16, 4, 112], "codes": ["2001","M2001", "L2001"] },
+        { "name": "1 1/2", "sizes": [12, 3, 72], "codes": ["2002","M2002", "L2002"] },
+        { "name": "2¨", "sizes": [8, 2, 40], "codes": ["2003","M2003", "L2003"] }
+      ]
+  },
+  {
+    "id": 7,
+    "type": "Polipropileno",
+    "image": "Te-Reduccion.png",
+    "title": "TE REDUCCIÓN",
+    "sizes": [
+        { "name": "3/4¨ X 1/2¨ X 3/4¨", "sizes": [50, 12, 400], "codes": ["1004","M1004", "L1004"] },
+        { "name": "1¨ X 1/2¨ X 1¨", "sizes": [30, 8, 250], "codes": ["1005","M1005", "L1005"] },
+        { "name": "1¨ X 3/4¨ X 1¨", "sizes": [30, 8, 200], "codes": ["1006","M1006", "L1006"] },
+        { "name": "1 1/4 X 1 X 1 1/4", "sizes": [16, 4, 140], "codes": ["2004","M2004", "L2004"] },
+        { "name": "1 1/2 X 1 1/4 X 1 1/2", "sizes": [12, 4, 90], "codes": ["2005","M2005", "L2005"] },
+        { "name": "2¨ X 1 1/2¨ X 2¨", "sizes": [8, 2, 50], "codes": ["2006","M2006", "L2006"] }
+      ]
+  },
+  {
+    "id": 8,
+    "type": "Polipropileno",
+    "image": "Codo-90.png",
+    "title": "CODO 90º HH",
+    "sizes": [
+      { "name": "1/2¨", "sizes": [100, 25, 900], "codes": ["1017","M1017", "L1017"] },
+      { "name": "3/4¨", "sizes": [80, 20, 480], "codes": ["1018","M1018", "L1018"] },
+      { "name": "1¨", "sizes": [50, 10, 300], "codes": ["1019","M1019", "L1019"] },
+      { "name": "1 1/4", "sizes": [20, 6, 160], "codes": ["2010","M2010", "L2010"] },
+      { "name": "1 1/2", "sizes": [16, 4, 110], "codes": ["2011","M2011", "L2011"] },
+      { "name": "2¨", "sizes": [10, 2, 60], "codes": ["2012","M2012", "L2012"] }
+      ]
+  },
+  {
+    "id": 9,
+    "type": "Polipropileno",
+    "image": "Codo-Reduccion.png",
+    "title": "CODO REDUCCIÓN",
+    "sizes": [
+        { "name": "3/4¨ X 1/2¨", "sizes": [80, 20, 600], "codes": ["1020","M1020", "L1020"] },
+        { "name": "1¨ X 1/2¨", "sizes": [50, 12, 450], "codes": ["1021","M1021", "L1021"] },
+        { "name": "1¨ X 3/4¨", "sizes": [50, 12, 350], "codes": ["1022","M1022", "L1022"] }
+      ]
+  },
+  {
+    "id": 10,
+    "type": "Polipropileno",
+    "image": "Codo-45.png",
+    "title": "CODO 45º HH",
+    "sizes": [
+        { "name": "1/2", "sizes": [100, 24, 1100], "codes": ["3001","M3001", "L3001"] },
+        { "name": "3/4", "sizes": [72, 20, 600], "codes": ["3002","M3002", "L3002"] },
+        { "name": "1", "sizes": [48, 12, 350], "codes": ["3003","M3003", "L3003"] }
+      ]
+  },
+  {
+    "id": 11,
+    "type": "Polipropileno",
+    "image": "Curva-90-HH.png",
+    "title": "CURVA 90º HH",
+    "sizes": [
+        { "name": "1/2", "sizes": [60, 18, 800], "codes": ["4001", "M4001", "L4001"] },
+        { "name": "3/4", "sizes": [40, 12, 400], "codes": ["4002", "M4002", "L4002"] },
+        { "name": "1", "sizes": [26, 8, 260], "codes": ["4003", "M4003", "L4003"] }
+      ]
+  },
+  {
+    "id": 12,
+    "type": "Polipropileno",
+    "image": "Bajada-de-Tanque.png",
+    "title": "BAJA DE TANQUE",
+    "sizes": [
+      { "name": "1/2", "sizes": [30, 8, 350], "codes": ["5001", "M5001", "L5001"] },
+      { "name": "3/4", "sizes": [20, 6, 240], "codes": ["5002", "M5002", "L5002"] },
+      { "name": "1", "sizes": [14, 4, 160], "codes": ["5003", "M5003", "L5003"] }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "Polipropileno",
+    "image": "Cupla-HH.png",
+    "title": "CUPLA HH",
+    "sizes": [
+      { "name": "1/2", "sizes": [100, 25, 1300], "codes": ["1033", "M1033", "L1033"] },
+      { "name": "3/4", "sizes": [80, 20, 800], "codes": ["1034", "M1034", "L1034"] },
+      { "name": "1", "sizes": [60, 15, 500], "codes": ["1035", "M1035", "L1035"] },
+      { "name": "1 1/4", "sizes": [30, 8, 260], "codes": ["2033", "M2033", "L2033"] },
+      { "name": "1 1/2", "sizes": [24, 6, 192], "codes": ["2034", "M2034", "L2034"] },
+      { "name": "2", "sizes": [20, 4, 100], "codes": ["2035", "M2035", "L2035"] }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "Polipropileno",
+    "image": "Cupla-MH.png",
+    "title": "CUPLA MH",
+    "sizes": [
+      { "name": "1/2", "sizes": [100, 30, 1800], "codes": ["1090", "M1090", "L1090"] },
+      { "name": "1/2 Extendida 7mm", "sizes": [90, 30, 1260], "codes": ["1091", "M1091", "L1091"] },
+      { "name": "1/2 Extendida 14mm", "sizes": [84, 28, 1200], "codes": ["1092", "M1092", "L1092"] },
+      { "name": "3/4", "sizes": [80, 24, 900], "codes": ["1093", "M1093", "L1093"] },
+      { "name": "1", "sizes": [50, 14, 550], "codes": ["1096", "M1096", "L1096"] }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "Polipropileno",
+    "image": "Cupla-Reduccion.png",
+    "title": "CUPLA REDUCCION",
+    "sizes": [
+      { "name": "3/4 X 1/2", "sizes": [80, 20, 880], "codes": ["1036", "M1036", "L1036"] },
+      { "name": "1 X 1/2", "sizes": [60, 15, 600], "codes": ["1037", "M1037", "L1037"] },
+      { "name": "1 X 3/4", "sizes": [60, 15, 500], "codes": ["1038", "M1038", "L1038"] },
+      { "name": "1/2 X 3/8", "sizes": [100, 40, 1300], "codes": ["1039", "M1039", "L1039"] },
+      { "name": "1 1/4 X 1", "sizes": [30, 8, 300], "codes": ["2036", "M2036", "L2036"] },
+      { "name": "1 1/2 X 1 1/4", "sizes": [24, 6, 200], "codes": ["2037", "M2037", "L2037"] },
+      { "name": "2 X 1 1/2", "sizes": [20, 4, 120], "codes": ["2038", "M2038", "L2038"] }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "Polipropileno",
+    "image": "Codo-90-MH.png",
+    "title": "CODO 90º MH",
+    "sizes": [
+      { "name": "1/2", "sizes": [100, 25, 1000], "codes": ["1023", "M1023", "L1023"] },
+      { "name": "3/4", "sizes": [70, 18, 600], "codes": ["1024", "M1024", "L1024"] },
+      { "name": "1", "sizes": [50, 12, 300], "codes": ["1025", "M1025", "L1025"] },
+      { "name": "1 1/4", "sizes": [20, 6, 180], "codes": ["2026", "M2026", "L2026"] },
+      { "name": "1 1/2", "sizes": [16, 4, 140], "codes": ["2027", "M2027", "L2027"] },
+      { "name": "2", "sizes": [10, 2, 70], "codes": ["2028", "M2028", "L2028"] }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "Polipropileno",
+    "image": "Tapa-H.png",
+    "title": "TAPA H",
+    "sizes": [
+      { "name": "1/2", "sizes": [150, 38, 2000], "codes": ["1041", "M1041", "L1041"] },
+      { "name": "3/4", "sizes": [120, 30, 1000], "codes": ["1042", "M1042", "L1042"] },
+      { "name": "1", "sizes": [80, 20, 700], "codes": ["1043", "M1043", "L1043"] },
+      { "name": "1 1/4", "sizes": [36, 12, 400], "codes": ["2044", "M2044", "L2044"] },
+      { "name": "1 1/2", "sizes": [26, 8, 286], "codes": ["2045", "M2045", "L2045"] },
+      { "name": "2", "sizes": [16, 4, 150], "codes": ["2046", "M2046", "L2046"] }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "Polipropileno",
+    "image": "Tapon-M.png",
+    "title": "TAPON M",
+    "sizes": [
+      { "name": "1/2", "sizes": [300, 75, 3000], "codes": ["1051", "M1051", "L1051"] },
+      { "name": "3/4", "sizes": [160, 40, 2200], "codes": ["1052", "M1052", "L1052"] },
+      { "name": "1", "sizes": [110, 28, 1200], "codes": ["1053", "M1053", "L1053"] },
+      { "name": "1 1/4", "sizes": [88, 20, 704], "codes": ["2054", "M2054", "L2054"] },
+      { "name": "1 1/2", "sizes": [70, 20, 560], "codes": ["2055", "M2055", "L2055"] },
+      { "name": "2", "sizes": [30, 8, 270], "codes": ["2056", "M2056", "L2056"] }
+    ]
+  },
+    {
+      "id": 20,
+      "type": "Polipropileno",
+      "image": "Entrerosca.png",
+      "title": "ENTREROSCA",
+      "sizes": [
+        { "name": "1/2", "sizes": [150, 38, 2100], "codes": ["1071", "M1071", "L1071"] },
+        { "name": "3/4", "sizes": [100, 25, 1300], "codes": ["1072", "M1072", "L1072"] },
+        { "name": "1", "sizes": [70, 18, 700], "codes": ["1073", "M1073", "L1073"] },
+        { "name": "1 1/4", "sizes": [56, 16, 450], "codes": ["2071", "M2071", "L2071"] },
+        { "name": "1 1/2", "sizes": [42, 12, 350], "codes": ["2072", "M2072", "L2072"] },
+        { "name": "2", "sizes": [24, 6, 180], "codes": ["2073", "M2073", "L2073"] }
+      ]
+    },
+    {
+      "id": 21,
+      "type": "Polipropileno",
+      "image": "Entrerosca-Reduccion.png",
+      "title": "ENTREROSCA REDUCCION",
+      "sizes": [
+        { "name": "1 X 3/4", "sizes": [70, 18, 900], "codes": ["1074", "M1074", "L1074"] },
+        { "name": "1 X 1/2", "sizes": [80, 20, 840], "codes": ["1075", "M1075", "L1075"] },
+        { "name": "3/4 X 1/2", "sizes": [110, 28, 1500], "codes": ["1076", "M1076", "L1076"] }
+      ]
+    },
+    {
+      "id": 22,
+      "type": "Polipropileno",
+      "image": "Niple.png",
+      "title": "NIPLE",
+      "sizes": [
+        { "name": "1/2 X 66MM", "sizes": [80, 20, 1040], "codes": ["1077", "M1077", "L1077"] },
+        { "name": "3/4 X 68MM", "sizes": [55, 14, 660], "codes": ["1078", "M1078", "L1078"] },
+        { "name": "1 X 73MM", "sizes": [40, 10, 400], "codes": ["1079", "M1079", "L1079"] }
+      ]
+    },
+    {
+      "id": 23,
+      "type": "Polipropileno",
+      "image": "Niple-6.png",
+      "title": "NIPLE X 6",
+      "sizes": [
+        { "name": "1/2 X 6 cm", "sizes": [80, 26, 1300], "codes": ["7706", "M7706", "L7706"] },
+        { "name": "3/4 X 6 cm", "sizes": [64, 24, 800], "codes": ["7806", "M7806", "L7806"] },
+        { "name": "1 X 6 cm", "sizes": [56, 18, 550], "codes": ["7906", "M7906", "L7906"] }
+      ]
+    },
+    {
+      "id": 24,
+      "type": "Polipropileno",
+      "image": "Niple-8.png",
+      "title": "NIPLE X 8",
+      "sizes": [
+        { "name": "1/2 X 8 cm", "sizes": [80, 20, 900], "codes": ["7708", "M7708", "L7708"] },
+        { "name": "3/4 X 8 cm", "sizes": [56, 18, 600], "codes": ["7808", "M7808", "L7808"] },
+        { "name": "1 X 8 cm", "sizes": [44, 12, 400], "codes": ["7908", "M7908", "L7908"] }
+      ]
+    },
+    {
+      "id": 25,
+      "type": "Polipropileno",
+      "image": "Niple-10.png",
+      "title": "NIPLE X 10",
+      "sizes": [
+        { "name": "1/2 X 10 cm", "sizes": [54, 16, 756], "codes": ["7710", "M7710", "L7710"] },
+        { "name": "3/4 X 10 cm", "sizes": [42, 14, 400], "codes": ["7810", "M7810", "L7810"] },
+        { "name": "1 X 10 cm", "sizes": [30, 10, 300], "codes": ["7910", "M7910", "L7910"] },
+        { "name": "1 1/4 X 10 cm", "sizes": [24, 8, 192], "codes": ["7110", "M7110", "L7110"] },
+        { "name": "1 1/2 X 10 cm", "sizes": [20, 6, 160], "codes": ["7210", "M7210", "L7210"] },
+        { "name": "2 X 10 cm", "sizes": [18, 4, 90], "codes": ["7310", "M7310", "L7310"] }
+      ]
+    },
+    {
+      "id": 26,
+      "type": "Polipropileno",
+      "image": "Niple-12.png",
+      "title": "NIPLE X 12",
+      "sizes": [
+        { "name": "1/2 X 12 cm", "sizes": [46, 12, 600], "codes": ["7712", "M7712", "L7712"] },
+        { "name": "3/4 X 12 cm", "sizes": [36, 10, 400], "codes": ["7812", "M7812", "L7812"] },
+        { "name": "1 X 12 cm", "sizes": [28, 8, 250], "codes": ["7912", "M7912", "L7912"] },
+        { "name": "1 1/4 X 12 cm", "sizes": [22, 6, 154], "codes": ["7112", "M7112", "L7112"] },
+        { "name": "1 1/2 X 12 cm", "sizes": [18, 6, 126], "codes": ["7212", "M7212", "L7212"] },
+        { "name": "2 X 12 cm", "sizes": [14, 4, 72], "codes": ["7312", "M7312", "L7312"] }
+      ]
+    },
+    {
+      "id": 27,
+      "type": "Polipropileno",
+      "image": "Niple-15.png",
+      "title": "NIPLE X 15",
+      "sizes": [
+        { "name": "1/2 X 15 cm", "sizes": [38, 12, 450], "codes": ["7715", "M7715", "L7715"] },
+        { "name": "3/4 X 15 cm", "sizes": [26, 8, 312], "codes": ["7815", "M7815", "L7815"] },
+        { "name": "1 X 15 cm", "sizes": [22, 6, 198], "codes": ["7915", "M7915", "L7915"] },
+        { "name": "1 1/4 X 15 cm", "sizes": [16, 4, 112], "codes": ["7115", "M7115", "L7115"] },
+        { "name": "1 1/2 X 15 cm", "sizes": [14, 4, 100], "codes": ["7215", "M7215", "L7215"] },
+        { "name": "2 X 15 cm", "sizes": [12, 2, 60], "codes": ["7315", "M7315", "L7315"] }
+      ]
+    },
+    {
+      "id": 28,
+      "type": "Polipropileno",
+      "image": "Buje-Reduccion.png",
+      "title": "BUJES REDUCCION",
+      "sizes": [
+        { "name": "1 X 3/4", "sizes": [100, 25, 1300], "codes": ["1061", "M1061", "L1061"] },
+        { "name": "1 X 1/2", "sizes": [100, 25, 1500], "codes": ["1062", "M1062", "L1062"] },
+        { "name": "3/4 X 1/2", "sizes": [160, 40, 2080], "codes": ["1063", "M1063", "L1063"] },
+        { "name": "1/2 X 3/8", "sizes": [200, 50, 3500], "codes": ["1064", "M1064", "L1064"] },
+        { "name": "1 1/4 X 1/2", "sizes": [62, 16, 750], "codes": ["2059", "M2059", "L2059"] },
+        { "name": "2 X 1", "sizes": [34, 8, 340], "codes": ["2060", "M2060", "L2060"] },
+        { "name": "2 X 1 1/2", "sizes": [30, 8, 300], "codes": ["2061", "M2061", "L2061"] },
+        { "name": "2 X 1 1/4", "sizes": [30, 8, 330], "codes": ["2062", "M2062", "L2062"] },
+        { "name": "1 1/2 X 1 1/4", "sizes": [50, 14, 600], "codes": ["2063", "M2063", "L2063"] },
+        { "name": "1 1/2 X 1", "sizes": [50, 14, 650], "codes": ["2064", "M2064", "L2064"] },
+        { "name": "1 1/4 X 1", "sizes": [66, 20, 800], "codes": ["2065", "M2065", "L2065"] },
+        { "name": "2 X 3/4", "sizes": [34, 8, 350], "codes": ["2066", "M2066", "L2066"] },
+        { "name": "2 X 1/2", "sizes": [34, 8, 350], "codes": ["2067", "M2067", "L2067"] },
+        { "name": "1 1/2 X 3/4", "sizes": [54, 16, 600], "codes": ["2068", "M2068", "L2068"] },
+        { "name": "1 1/2 X 1/2", "sizes": [54, 16, 600], "codes": ["2069", "M2069", "L2069"] },
+        { "name": "1 1/4 X 3/4", "sizes": [62, 16, 800], "codes": ["2070", "M2070", "L2070"] }
+      ]
+    },
+    {
+      "id": 29,
+      "type": "Polipropileno",
+      "image": "Union-Doble.png",
+      "title": "UNION DOBLE",
+      "sizes": [
+        { "name": "1/2", "sizes": [50, 12, 504], "codes": ["1081", "M1081", "L1081"] },
+        { "name": "3/4", "sizes": [35, 8, 350], "codes": ["1082", "M1082", "L1082"] },
+        { "name": "1", "sizes": [25, 6, 180], "codes": ["1083", "M1083", "L1083"] },
+        { "name": "1 1/4", "sizes": [16, 4, 112], "codes": ["2081", "M2081", "L2081"] },
+        { "name": "1 1/2", "sizes": [12, 4, 80], "codes": ["2082", "M2082", "L2082"] },
+        { "name": "2", "sizes": [8, 2, 50], "codes": ["2083", "M2083", "L2083"] }
+      ]
+    },
+    {
+      "id": 30,
+      "type": "Polipropileno",
+      "image": "O-Ring.png",
+      "title": "O'RING-UNION DOBLE",
+      "sizes": [
+        { "name": "Repuesto U.D. Ø 1/2", "sizes": [100, 10], "codes": ["O-1081", "MO1081"] },
+        { "name": "Repuesto U.D. Ø 3/4", "sizes": [100, 10], "codes": ["O-1082", "MO1082"] },
+        { "name": "Repuesto U.D. Ø 1", "sizes": [100, 10], "codes": ["O-1083", "MO1083"] },
+        { "name": "Repuesto U.D. Ø 1 1/4", "sizes": [20, 10], "codes": ["O-2081", "MO2081"] },
+        { "name": "Repuesto U.D. Ø 1 1/2", "sizes": [20, 10], "codes": ["O-2082", "MO2082"] },
+        { "name": "Repuesto U.D. Ø 2", "sizes": [20, 10], "codes": ["O-2083", "MO2083"] }
+      ]
+    }
 ]
