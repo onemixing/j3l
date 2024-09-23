@@ -89,7 +89,7 @@ export default function Page() {
   }, [savedCart]);
   return (
     <div>
-      <div className="container px-2 md:px-6">
+      <div className="container px-0 md:px-6">
         <section className="bg-background py-4">
           <div className="btnControls w-full flex align-center justify-center">
             {/*}
@@ -132,7 +132,7 @@ export default function Page() {
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="flex flex-col items-start gap-4 rounded-lg bg-card p-6 shadow-sm"
+                  className="flex flex-col items-start gap-2 md:gap-4 rounded-lg bg-card p-2 md:p-6 shadow-sm"
                 >
                   <Image
                     src={"/productsImgs/" + product.image}
