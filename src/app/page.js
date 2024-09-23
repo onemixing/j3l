@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 import {
   Sheet,
@@ -167,12 +168,14 @@ export default function Page() {
                       <DialogTrigger asChild>
                         <Button className="w-full">Medidas</Button>
                       </DialogTrigger>
+                    
                       <DialogContent>
                         <DialogHeader>
                           <DialogTitle>
                             Selecciona la medida de la pieza:{" "}
                             <span className="font-bold">{product.title}</span>
                           </DialogTitle>
+                          <ScrollArea className="h-auto max-h-96 w-full rounded-md border">
                           <DialogDescription>
                             <Table className="mt-8">
                               {/*}
@@ -401,6 +404,7 @@ export default function Page() {
                               </TableBody>
                             </Table>
                           </DialogDescription>
+                          </ScrollArea>
                         </DialogHeader>
                       </DialogContent>
                     </Dialog>
