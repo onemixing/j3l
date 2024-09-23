@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area"
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 import {
   Sheet,
@@ -44,7 +44,6 @@ export default function Page() {
   const products = piezas;
   let savedCart = [];
 
-
   const [cartItems, setCartItems] = useState(savedCart ?? []);
   const [quantity, setQuantity] = useState(1);
   const [cartLength, setCartLength] = useState(0);
@@ -52,12 +51,12 @@ export default function Page() {
   useEffect(() => {
     savedCart = JSON.parse(localStorage.getItem("cartList") || "[]");
     setCartItems(savedCart ?? []);
-  },[])
+  }, []);
 
   var a = [];
 
   const addToCart = (product) => {
-    a = JSON.parse(localStorage.getItem('cartList')) || [];
+    a = JSON.parse(localStorage.getItem("cartList")) || [];
     a.push(product);
 
     //setCartItems((prevItems) => [...prevItems, product]);
@@ -123,7 +122,17 @@ export default function Page() {
         )}{*/}
             <a href="/cart">
               <Button variant="outline">
-                Ver Carrito<Badge className="ml-2">{cartLength}</Badge>
+                Ver Carrito{/*}<Badge className="ml-2">{cartLength}</Badge>{*/}
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  height="1.2em"
+                  width="1.2em"
+                  className="ml-2"
+                >
+                  <path fill="none" d="M0 0h24v24H0z" />
+                  <path d="M4 6.414L.757 3.172l1.415-1.415L5.414 5h15.242a1 1 0 01.958 1.287l-2.4 8a1 1 0 01-.958.713H6v2h11v2H5a1 1 0 01-1-1V6.414zM5.5 23a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm12 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" />
+                </svg>
               </Button>
             </a>
           </div>
@@ -168,7 +177,7 @@ export default function Page() {
                       <DialogTrigger asChild>
                         <Button className="w-full">Medidas</Button>
                       </DialogTrigger>
-                    
+
                       <DialogContent>
                         <DialogHeader>
                           <DialogTitle>
@@ -176,234 +185,246 @@ export default function Page() {
                             <span className="font-bold">{product.title}</span>
                           </DialogTitle>
                           <ScrollArea className="h-auto max-h-96 w-full rounded-md border">
-                          <DialogDescription>
-                            <Table className="mt-8">
-                              {/*}
+                            <DialogDescription>
+                              <Table className="mt-8">
+                                {/*}
                             <TableCaption>
                               A list of your recent invoices.
                             </TableCaption>{*/}
-                              <TableHeader>
-                                <TableRow>
-                                  <TableHead className="font-bold w-[100px]">
-                                    Medida
-                                  </TableHead>
-                                  <TableHead className="font-bold">
-                                    Grande
-                                  </TableHead>
-                                  <TableHead className="font-bold">
-                                    Mini
-                                  </TableHead>
-                                  <TableHead className="font-bold">
-                                    A Granel
-                                  </TableHead>
-                                </TableRow>
-                              </TableHeader>
-                              <TableBody>
-                                {product.sizes.map((size) => (
-                                  <TableRow key={size.name}>
-                                    <TableCell className="font-medium">
-                                      {size.name}
-                                    </TableCell>
-                                    <TableCell>
-                                      <Badge>{size.sizes[0]}</Badge>
-                                      <Dialog>
-                                        <DialogTrigger asChild>
-                                          <Button
-                                            variant="ghost"
-                                            className="font-bold"
-                                          >
-                                            +
-                                          </Button>
-                                        </DialogTrigger>
-                                        <DialogContent className="sm:max-w-md">
-                                          <DialogHeader>
-                                            <DialogTitle>Cantidad</DialogTitle>
-                                            <DialogDescription>
-                                              Seleccione la cantidad de bolsas.
-                                            </DialogDescription>
-                                          </DialogHeader>
-                                          <div className="flex items-center space-x-2">
-                                            <Button
-                                              variant="ghost"
-                                              onClick={minusQuantity}
-                                            >
-                                              -
-                                            </Button>
-                                            <div className="grid flex-1 gap-2">
-                                              <Input
-                                                id="link"
-                                                defaultValue={quantity}
-                                                readOnly
-                                                type="number"
-                                                value={quantity}
-                                              />
-                                            </div>
-                                            <Button
-                                              variant="ghost"
-                                              onClick={plusQuantity}
-                                            >
-                                              +
-                                            </Button>
-                                          </div>
-                                          <DialogClose asChild>
-                                            <Button
-                                              onClick={() =>
-                                                addToCart({
-                                                  cartID:
-                                                    product.id + size.sizes[0],
-                                                  id: product.id,
-                                                  image: product.image,
-                                                  title: product.title,
-                                                  sizeName: size.name,
-                                                  sizeBag: size.sizes[0],
-                                                  sizeBagString: "Grande",
-                                                  code: size.codes[0],
-                                                  quantity: quantity,
-                                                  type: product.type,
-                                                })
-                                              }
-                                            >
-                                              Aceptar
-                                            </Button>
-                                          </DialogClose>
-                                        </DialogContent>
-                                      </Dialog>
-                                    </TableCell>
-                                    <TableCell>
-                                      <Badge>{size.sizes[1]}</Badge>
-                                      <Dialog>
-                                        <DialogTrigger asChild>
-                                          <Button
-                                            variant="ghost"
-                                            className="font-bold"
-                                          >
-                                            +
-                                          </Button>
-                                        </DialogTrigger>
-                                        <DialogContent className="sm:max-w-md">
-                                          <DialogHeader>
-                                            <DialogTitle>Cantidad</DialogTitle>
-                                            <DialogDescription>
-                                              Seleccione la cantidad de bolsas.
-                                            </DialogDescription>
-                                          </DialogHeader>
-                                          <div className="flex items-center space-x-2">
-                                            <Button
-                                              variant="ghost"
-                                              onClick={minusQuantity}
-                                            >
-                                              -
-                                            </Button>
-                                            <div className="grid flex-1 gap-2">
-                                              <Input
-                                                id="link"
-                                                defaultValue={quantity}
-                                                readOnly
-                                                type="number"
-                                                value={quantity}
-                                              />
-                                            </div>
-                                            <Button
-                                              variant="ghost"
-                                              onClick={plusQuantity}
-                                            >
-                                              +
-                                            </Button>
-                                          </div>
-                                          <DialogClose asChild>
-                                            <Button
-                                              onClick={() =>
-                                                addToCart({
-                                                  cartID:
-                                                    product.id + size.sizes[1],
-                                                  id: product.id,
-                                                  image: product.image,
-                                                  title: product.title,
-                                                  sizeName: size.name,
-                                                  sizeBag: size.sizes[1],
-                                                  sizeBagString: "Mini",
-                                                  code: size.codes[1],
-                                                  quantity: quantity,
-                                                  type: product.type,
-                                                })
-                                              }
-                                            >
-                                              Aceptar
-                                            </Button>
-                                          </DialogClose>
-                                        </DialogContent>
-                                      </Dialog>
-                                    </TableCell>
-                                    <TableCell>
-                                      <Badge>{size.sizes[2]}</Badge>
-                                      <Dialog>
-                                        <DialogTrigger asChild>
-                                          <Button
-                                            variant="ghost"
-                                            className="font-bold"
-                                          >
-                                            +
-                                          </Button>
-                                        </DialogTrigger>
-                                        <DialogContent className="sm:max-w-md">
-                                          <DialogHeader>
-                                            <DialogTitle>Cantidad</DialogTitle>
-                                            <DialogDescription>
-                                              Seleccione la cantidad de bolsas.
-                                            </DialogDescription>
-                                          </DialogHeader>
-                                          <div className="flex items-center space-x-2">
-                                            <Button
-                                              variant="ghost"
-                                              onClick={minusQuantity}
-                                            >
-                                              -
-                                            </Button>
-                                            <div className="grid flex-1 gap-2">
-                                              <Input
-                                                id="link"
-                                                defaultValue={quantity}
-                                                readOnly
-                                                type="number"
-                                                value={quantity}
-                                              />
-                                            </div>
-                                            <Button
-                                              variant="ghost"
-                                              onClick={plusQuantity}
-                                            >
-                                              +
-                                            </Button>
-                                          </div>
-                                          <DialogClose asChild>
-                                            <Button
-                                              onClick={() =>
-                                                addToCart({
-                                                  cartID:
-                                                    product.id + size.sizes[2],
-                                                  id: product.id,
-                                                  image: product.image,
-                                                  title: product.title,
-                                                  sizeName: size.name,
-                                                  sizeBag: size.sizes[2],
-                                                  sizeBagString: "A Granel",
-                                                  code: size.codes[2],
-                                                  quantity: quantity,
-                                                  type: product.type,
-                                                })
-                                              }
-                                            >
-                                              Aceptar
-                                            </Button>
-                                          </DialogClose>
-                                        </DialogContent>
-                                      </Dialog>
-                                    </TableCell>
+                                <TableHeader>
+                                  <TableRow>
+                                    <TableHead className="font-bold w-[100px]">
+                                      Medida
+                                    </TableHead>
+                                    <TableHead className="font-bold">
+                                      Grande
+                                    </TableHead>
+                                    <TableHead className="font-bold">
+                                      Mini
+                                    </TableHead>
+                                    <TableHead className="font-bold">
+                                      A Granel
+                                    </TableHead>
                                   </TableRow>
-                                ))}
-                              </TableBody>
-                            </Table>
-                          </DialogDescription>
+                                </TableHeader>
+                                <TableBody>
+                                  {product.sizes.map((size) => (
+                                    <TableRow key={size.name}>
+                                      <TableCell className="font-medium">
+                                        {size.name}
+                                      </TableCell>
+                                      <TableCell>
+                                        <Badge>{size.sizes[0]}</Badge>
+                                        <Dialog>
+                                          <DialogTrigger asChild>
+                                            <Button
+                                              variant="ghost"
+                                              className="font-bold"
+                                            >
+                                              +
+                                            </Button>
+                                          </DialogTrigger>
+                                          <DialogContent className="sm:max-w-md">
+                                            <DialogHeader>
+                                              <DialogTitle>
+                                                Cantidad
+                                              </DialogTitle>
+                                              <DialogDescription>
+                                                Seleccione la cantidad de
+                                                bolsas.
+                                              </DialogDescription>
+                                            </DialogHeader>
+                                            <div className="flex items-center space-x-2">
+                                              <Button
+                                                variant="ghost"
+                                                onClick={minusQuantity}
+                                              >
+                                                -
+                                              </Button>
+                                              <div className="grid flex-1 gap-2">
+                                                <Input
+                                                  id="link"
+                                                  defaultValue={quantity}
+                                                  readOnly
+                                                  type="number"
+                                                  value={quantity}
+                                                />
+                                              </div>
+                                              <Button
+                                                variant="ghost"
+                                                onClick={plusQuantity}
+                                              >
+                                                +
+                                              </Button>
+                                            </div>
+                                            <DialogClose asChild>
+                                              <Button
+                                                onClick={() =>
+                                                  addToCart({
+                                                    cartID:
+                                                      product.id +
+                                                      size.sizes[0],
+                                                    id: product.id,
+                                                    image: product.image,
+                                                    title: product.title,
+                                                    sizeName: size.name,
+                                                    sizeBag: size.sizes[0],
+                                                    sizeBagString: "Grande",
+                                                    code: size.codes[0],
+                                                    quantity: quantity,
+                                                    type: product.type,
+                                                  })
+                                                }
+                                              >
+                                                Aceptar
+                                              </Button>
+                                            </DialogClose>
+                                          </DialogContent>
+                                        </Dialog>
+                                      </TableCell>
+                                      <TableCell>
+                                        <Badge>{size.sizes[1]}</Badge>
+                                        <Dialog>
+                                          <DialogTrigger asChild>
+                                            <Button
+                                              variant="ghost"
+                                              className="font-bold"
+                                            >
+                                              +
+                                            </Button>
+                                          </DialogTrigger>
+                                          <DialogContent className="sm:max-w-md">
+                                            <DialogHeader>
+                                              <DialogTitle>
+                                                Cantidad
+                                              </DialogTitle>
+                                              <DialogDescription>
+                                                Seleccione la cantidad de
+                                                bolsas.
+                                              </DialogDescription>
+                                            </DialogHeader>
+                                            <div className="flex items-center space-x-2">
+                                              <Button
+                                                variant="ghost"
+                                                onClick={minusQuantity}
+                                              >
+                                                -
+                                              </Button>
+                                              <div className="grid flex-1 gap-2">
+                                                <Input
+                                                  id="link"
+                                                  defaultValue={quantity}
+                                                  readOnly
+                                                  type="number"
+                                                  value={quantity}
+                                                />
+                                              </div>
+                                              <Button
+                                                variant="ghost"
+                                                onClick={plusQuantity}
+                                              >
+                                                +
+                                              </Button>
+                                            </div>
+                                            <DialogClose asChild>
+                                              <Button
+                                                onClick={() =>
+                                                  addToCart({
+                                                    cartID:
+                                                      product.id +
+                                                      size.sizes[1],
+                                                    id: product.id,
+                                                    image: product.image,
+                                                    title: product.title,
+                                                    sizeName: size.name,
+                                                    sizeBag: size.sizes[1],
+                                                    sizeBagString: "Mini",
+                                                    code: size.codes[1],
+                                                    quantity: quantity,
+                                                    type: product.type,
+                                                  })
+                                                }
+                                              >
+                                                Aceptar
+                                              </Button>
+                                            </DialogClose>
+                                          </DialogContent>
+                                        </Dialog>
+                                      </TableCell>
+                                      <TableCell>
+                                        <Badge>{size.sizes[2]}</Badge>
+                                        <Dialog>
+                                          <DialogTrigger asChild>
+                                            <Button
+                                              variant="ghost"
+                                              className="font-bold"
+                                            >
+                                              +
+                                            </Button>
+                                          </DialogTrigger>
+                                          <DialogContent className="sm:max-w-md">
+                                            <DialogHeader>
+                                              <DialogTitle>
+                                                Cantidad
+                                              </DialogTitle>
+                                              <DialogDescription>
+                                                Seleccione la cantidad de
+                                                bolsas.
+                                              </DialogDescription>
+                                            </DialogHeader>
+                                            <div className="flex items-center space-x-2">
+                                              <Button
+                                                variant="ghost"
+                                                onClick={minusQuantity}
+                                              >
+                                                -
+                                              </Button>
+                                              <div className="grid flex-1 gap-2">
+                                                <Input
+                                                  id="link"
+                                                  defaultValue={quantity}
+                                                  readOnly
+                                                  type="number"
+                                                  value={quantity}
+                                                />
+                                              </div>
+                                              <Button
+                                                variant="ghost"
+                                                onClick={plusQuantity}
+                                              >
+                                                +
+                                              </Button>
+                                            </div>
+                                            <DialogClose asChild>
+                                              <Button
+                                                onClick={() =>
+                                                  addToCart({
+                                                    cartID:
+                                                      product.id +
+                                                      size.sizes[2],
+                                                    id: product.id,
+                                                    image: product.image,
+                                                    title: product.title,
+                                                    sizeName: size.name,
+                                                    sizeBag: size.sizes[2],
+                                                    sizeBagString: "A Granel",
+                                                    code: size.codes[2],
+                                                    quantity: quantity,
+                                                    type: product.type,
+                                                  })
+                                                }
+                                              >
+                                                Aceptar
+                                              </Button>
+                                            </DialogClose>
+                                          </DialogContent>
+                                        </Dialog>
+                                      </TableCell>
+                                    </TableRow>
+                                  ))}
+                                </TableBody>
+                              </Table>
+                            </DialogDescription>
                           </ScrollArea>
                         </DialogHeader>
                       </DialogContent>
