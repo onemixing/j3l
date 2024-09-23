@@ -33,9 +33,16 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-const cartLocalStorage = JSON.parse(localStorage.getItem("cartList") || "[]");
+
 export default function Cart() {
-  const [cartItems, setCartItems] = useState(cartLocalStorage);
+  let savedCart = [];
+
+  useEffect(() => {
+    savedCart = JSON.parse(window.localStorage.getItem("cartList") || "[]");
+    setCartItems(savedCart ?? []);
+  },[])
+
+  const [cartItems, setCartItems] = useState(savedCart ?? []);
   const deleteCart = () => {
     localStorage.removeItem("cartList");
     window.location.reload();
@@ -43,25 +50,40 @@ export default function Cart() {
   const cotizarWsp = () => {
     var i;
     var textToSend = "Hola J3L! Me gustaria cotizar las siguientes piezas: %0A";
-    for (i = 0; i < cartItems.length; i++){
+    for (i = 0; i < cartItems.length; i++) {
       var emoticonPieza = "";
-      if(cartItems[i].type == "Termofusion"){
+      if (cartItems[i].type == "Termofusion") {
         emoticonPieza = "`f`";
-      }else if(cartItems[i].type == "Polipropileno"){
+      } else if (cartItems[i].type == "Polipropileno") {
         emoticonPieza = "`p`";
-      }else if(cartItems[i].type == "Mixta"){
+      } else if (cartItems[i].type == "Mixta") {
         emoticonPieza = "`m`";
       }
-      textToSend = textToSend + "%0A*" + emoticonPieza + " " + cartItems[i].title + " " + cartItems[i].sizeName +" "+cartItems[i].sizeBagString + "*("+cartItems[i].sizeBag+") | cantidad: *"+ cartItems[i].quantity +"* | codigo: " + cartItems[i].code;
+      textToSend =
+        textToSend +
+        "%0A*" +
+        emoticonPieza +
+        " " +
+        cartItems[i].title +
+        " " +
+        cartItems[i].sizeName +
+        " " +
+        cartItems[i].sizeBagString +
+        "*(" +
+        cartItems[i].sizeBag +
+        ") | cantidad: *" +
+        cartItems[i].quantity +
+        "* | codigo: " +
+        cartItems[i].code;
     }
-    const num1 = 541164467398;
+    const num1 = 5491133559551;
     //window.location.href = "https://wa.me/"+num1+"?text="+textToSend;
-    window.open("https://wa.me/"+num1+"?text="+textToSend, '_blank');
-
-  }
+    window.open("https://wa.me/" + num1 + "?text=" + textToSend, "_blank");
+  };
   useEffect(() => {
-    localStorage.setItem("cartList", JSON.stringify(cartItems));
-  }, [cartItems]);
+    //localStorage.setItem("cartList", JSON.stringify(cartItems));
+    //console.log(JSON.parse(localStorage.getItem("cartList") || "[]"));
+  }, []);
 
   return (
     <div>
@@ -100,9 +122,7 @@ export default function Cart() {
 
           <Dialog>
             <DialogTrigger asChild>
-            <Button className="ml-2 bg-red-500">
-                Limpiar carrito
-              </Button>
+              <Button className="ml-2 bg-red-500">Limpiar carrito</Button>
             </DialogTrigger>
             <DialogContent>
               <DialogHeader>
@@ -111,12 +131,12 @@ export default function Cart() {
                   Se removeran todas piezas añadidas al carrito.
                 </DialogDescription>
                 <Button className="ml-2 bg-red-500 w-full" onClick={deleteCart}>
-                Limpiar carrito
-              </Button>
+                  Limpiar carrito
+                </Button>
               </DialogHeader>
             </DialogContent>
           </Dialog>
-          
+
           <Table>
             <TableCaption></TableCaption>
             <TableHeader>

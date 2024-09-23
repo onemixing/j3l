@@ -1,15 +1,10 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/DdF3AwLqf4A
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
 "use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import piezas from "./api/products.json";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -43,14 +38,30 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-const cartLocalStorage = JSON.parse(localStorage.getItem("cartList") || "[]");
+
 export default function Page() {
   const products = piezas;
-  const [cartItems, setCartItems] = useState(cartLocalStorage);
+  let savedCart = [];
+
+
+  const [cartItems, setCartItems] = useState(savedCart ?? []);
   const [quantity, setQuantity] = useState(1);
+  const [cartLength, setCartLength] = useState(0);
+
+  useEffect(() => {
+    savedCart = JSON.parse(localStorage.getItem("cartList") || "[]");
+    setCartItems(savedCart ?? []);
+  },[])
+
+  var a = [];
 
   const addToCart = (product) => {
-    setCartItems((prevItems) => [...prevItems, product]);
+    a = JSON.parse(localStorage.getItem('cartList')) || [];
+    a.push(product);
+
+    //setCartItems((prevItems) => [...prevItems, product]);
+    localStorage.setItem("cartList", JSON.stringify(a));
+
     toast(
       "+" +
         product.quantity +
@@ -70,9 +81,12 @@ export default function Page() {
   const minusQuantity = () => {
     setQuantity(quantity - 1);
   };
+
   useEffect(() => {
-    localStorage.setItem("cartList", JSON.stringify(cartItems));
-  }, [cartItems]);
+    //localStorage.setItem("cartList", savedCart ?? []);
+    setCartLength(JSON.parse(localStorage.getItem("cartList") || "[]").length);
+    //console.log(JSON.parse(localStorage.getItem("cartList") || "[]"));
+  }, [savedCart]);
   return (
     <div>
       <div className="container px-2 md:px-6">
@@ -108,7 +122,7 @@ export default function Page() {
         )}{*/}
             <a href="/cart">
               <Button variant="outline">
-                Ver Carrito<Badge className="ml-2">{cartItems.length}</Badge>
+                Ver Carrito<Badge className="ml-2">{cartLength}</Badge>
               </Button>
             </a>
           </div>
@@ -168,16 +182,16 @@ export default function Page() {
                               <TableHeader>
                                 <TableRow>
                                   <TableHead className="font-bold w-[100px]">
-                                  Medida
+                                    Medida
                                   </TableHead>
                                   <TableHead className="font-bold">
-                                  Grande
+                                    Grande
                                   </TableHead>
                                   <TableHead className="font-bold">
-                                  Mini
+                                    Mini
                                   </TableHead>
                                   <TableHead className="font-bold">
-                                  A Granel
+                                    A Granel
                                   </TableHead>
                                 </TableRow>
                               </TableHeader>
